@@ -1,0 +1,29 @@
+nav{
+    padding: 12px 0;
+    z-index: 100;
+}
+
+a{
+    white-space: nowrap;
+}
+
+.display-toggle{
+    display: unset;
+}
+
+@media (min-width: 768px) {
+    #navbarTogglerDemo03{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .display-toggle{
+        display: none;
+    }
+}
+
+@media (min-width: 1150px) {
+    .display-toggle{
+        display: unset;
+    }
+}
