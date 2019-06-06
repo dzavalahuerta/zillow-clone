@@ -1,4 +1,4 @@
-nav{
+.main-nav{
     padding: 12px 0;
     z-index: 100;
 }
@@ -11,6 +11,125 @@ a{
     display: unset;
 }
 
+footer{
+    height: 436px;
+    position: relative;
+}
+
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2.2em 8em;
+}
+
+.dropdowns .vertical-line{
+    display: inline-block;
+    height: 30px;
+    width: 1px;
+    background-color: rgb(150,150,150);
+}
+
+.dropdowns span{
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.dropdowns span:hover{
+    text-decoration: underline;
+}
+
+/* .dropdowns > span > span{
+    
+} */
+
+/* .dropdowns span:focus{
+    border-radius: 2px;
+    border: solid rgba(0, 106, 255, 0.562) 1.5px;
+    transform: rotate(180deg);
+} */
+
+.arrow{
+    height: 7px;
+    width: 14px;
+    margin-left: 25px;
+}
+
+.footer-nav{
+    display: table;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.footer-nav span{
+    margin: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+footer .zillow-brand-container{
+    display: table;
+    margin: 0 auto;
+
+
+}
+
+.zillow-brand-container .zillow-brand-img{
+    width: 150px;
+    height: 35px;
+}
+
+.zillow-brand-container .facebook-svg,
+.zillow-brand-container .twitter-svg,
+.zillow-brand-container .house-img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+footer .footer-img{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+/* .house-on-left .right-roof{
+    position: relative;
+    top: 154px;
+    left: 251px;
+    
+    height: 62px;
+    width: 58px;
+    border-left: solid rgb(19,111,251) 3.5px;
+    background-color: rgb(12,68,153);
+    
+    transform: skewX(30deg);
+}
+
+.house-on-left .left-roof{
+    position: relative;
+    top: 92px;
+    left: 215px;
+    
+    height: 62px;
+    width: 3.5px;
+    background-color: rgb(19,111,251);
+    
+    transform: skewX(-30deg)
+}
+
+.house-on-left .front-roof{
+    position: relative;
+    top: 80px;
+    left: 100px;
+
+    height: 50px;
+    width: 50px;
+    background-color: rgb(193,232,250);
+
+    transform: rotate(45deg);
+} */
 @media (min-width: 768px) {
     #navbarTogglerDemo03{
         display: flex;
