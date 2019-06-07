@@ -1,5 +1,5 @@
 <nav *ngIf="!scrolledPassedFirstInput" class="navbar navbar-expand-md navbar-light bg-white main-nav">
-    <button (click)="fullscreenNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="small-screen-brand">
@@ -7,23 +7,22 @@
             <img class="zillow-brand-img"src="../assets/images/zillow-brand.PNG" alt="">
         </a>
     </div>
-    
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav ml-5 mt-2 mt-lg-0 p-2 ul-small-screen-style">
+        <ul class="navbar-nav mt-lg-0 p-2 ul-small-screen-style">
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark"><span>Buy</span></a>
+                <a class="nav-link text-dark dropdownLink" #buyLink><span>Buy</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark"><span>Rent</span></a>
+                <a class="nav-link text-dark dropdownLink" #rentLink><span>Rent</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark"><span>Sell</span></a>
+                <a class="nav-link text-dark dropdownLink" #sellLink><span>Sell</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark"><span>Home Loans</span></a>
+                <a class="nav-link text-dark dropdownLink" #homeLoansLink><span>Home Loans</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark"><span>Agent finder</span></a>
+                <a class="nav-link text-dark dropdownLink" #agentFinderLink><span>Agent finder</span></a>
             </li>
         </ul>
         <div class="p-2">
@@ -31,7 +30,7 @@
                 <img class="zillow-brand-img"src="../assets/images/zillow-brand.PNG" alt="">
             </a>
         </div>
-        <ul class="navbar-nav mr-5 mt-2 mt-lg-0 p-2 ul-display-toggle">
+        <ul class="navbar-nav mt-lg-0 p-2 ul-display-toggle">
             <li class="nav-item mr-3 li-display-toggle">
                 <a class="nav-link text-dark"><span>List your rental</span></a>
             </li>
@@ -47,7 +46,124 @@
         </ul>
     </div>
 </nav>
-
+<div class="buy-link-on-hover-dropdown linkDropdown">
+    <div>
+        <h3>Imperial homes for sale</h3>
+        <div>
+            <span>Homes for sale</span>
+            <span>Foreclosures</span>
+            <span>For sale by owner</span>
+            <span>Open houses</span>
+            <span>New construction</span>
+            <span>Coming soon</span>
+            <span>Recent home sales</span>
+            <span>All homes</span>
+        </div>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>Resources</h3>
+        <div>
+            <span>Buyers Guide</span>
+            <span>Foreclosure center</span>
+            <span>Real estate app</span>
+            <span>Find a buyer's agent</span>
+            <span>Schools in Imperial</span>
+        </div>
+    </div>
+</div>
+<div class="rent-link-on-hover-dropdown linkDropdown">
+    <div>
+        <h3>Search For Rentals</h3>
+        <span>Rental Buildings</span>
+        <span>Apartments for rent</span>
+        <span>Houses for rent</span>
+        <span>All rental listings</span>
+        <span>All rental buildings</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>I'm a Rental Manager</h3>
+        <span>Sign in to see your listings</span>
+        <span>List a rental</span>
+        <span>Resource center</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>I'm a Renter</h3>
+        <span>My rent payments</span>
+        <span>Reant affordability calculator</span>
+        <span>Renters Guide</span>
+    </div>
+</div>
+<div class="sell-link-on-hover-dropdown linkDropdown">
+    <div>
+        <h3>Selling tools</h3>
+        <span>See your home's Zestimate</span>
+        <span>Home values</span>
+        <span>Sellers Guide</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>Post a home for sale</h3>
+        <span>Sell with Zillow Offers</span>
+        <span>For sale by owner</span>
+        <span>Make me move</span>
+    </div>
+</div>
+<div class="home-loans-link-on-hover-dropdown linkDropdown">
+    <div>
+        <h3>Shop mortgages</h3>
+        <span>Mortgage lenders</span>
+        <span>HELOC lenders</span>
+        <span>Mortgage rates</span>
+        <span>Refinance rates</span>
+        <span>All mortgage rates</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>Calculators</h3>
+        <span>Mortgage calculator</span>
+        <span>Refinance calculator</span>
+        <span>Affordability calculator</span>
+        <span>Amortization calculator</span>
+        <span>Debt-to-Income calculator</span>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>Resources</h3>
+        <span>Lender reviews</span>
+        <span>Mortgage learning center</span>
+        <span>Mortgages app</span>
+        <span>Lender resource center</span>
+    </div>
+</div>
+<div class="agent-finder-link-on-hover-dropdown linkDropdown">
+    <div>
+        <h3>Looking for pros?</h3>
+        <div>
+            <span>Real estate agents</span>
+            <span>Property Managers</span>
+            <span>Home inspectors</span>
+            <span>Other pros</span>
+            <span>Home improvement pros</span>
+            <span>Home builders</span>
+            <span>Real estate photographers</span>
+        </div>
+    </div>
+    <div class="vertical-line"></div>
+    <div>
+        <h3>I'm a pro</h3>
+        <div>
+            <span>Agent advertising</span>
+            <span>Agent resource center</span>
+            <span>Create a free agent account</span>
+            <span>Real estate marketing guide</span>
+            <span>Agent email scripts</span>
+            <span>Listing flyer templates</span>
+        </div>
+    </div>
+</div>
 <nav *ngIf="scrolledPassedFirstInput" class="secondary-nav">
     <img class="zillow-brand-img" src="../assets/images/zillow-brand.PNG" alt="">
     <form>

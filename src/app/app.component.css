@@ -3,8 +3,66 @@
     z-index: 100;
 }
 
+.main-nav ul{
+    margin: 0 3rem;
+}
+
 .main-nav li a:hover span{
     color: rgb(19,111,251);
+}
+
+/* last things to do:
+finish all of the linkdropdowns,
+look for more issues
+refactorcode */
+
+.linkDropdown{
+    width: 100%;
+    background-color: white;
+    border-top: solid rgb(210,210,210) 1px;
+    position: sticky;
+    z-index: 100;
+    display: none;
+    padding: 2em 0;
+}
+
+.linkDropdown h3{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.linkDropdown span{
+    margin: 1em 0 0;
+    font-size: 14px;
+    color: rgb(30, 124, 255);
+}
+
+.linkDropdown .vertical-line{
+    height: 185px; /*this will be dynamic later*/
+    width: 1px;
+    background-color: rgb(210,210,210);
+    margin-right: 2em;
+    margin-top: -10px;
+    align-self: flex-start;
+}
+
+.buy-link-on-hover-dropdown > div:nth-of-type(1){
+    margin-left: 2em;
+}
+
+.buy-link-on-hover-dropdown > div{
+    width: 300px;
+}
+
+.buy-link-on-hover-dropdown div > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 150px;
+}
+
+.rent-link-on-hover-dropdown div{
+    width: 200px;
 }
 
 .small-screen-brand{
@@ -245,7 +303,7 @@ footer .footer-img{
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1060px) {
     form{
         width: 92.5%;
         margin: 0 auto;
@@ -253,6 +311,14 @@ footer .footer-img{
     
     .secondary-nav img{
         display: none;
+    }
+
+    .main-nav ul{
+        margin: 0;
+    }
+
+    .main-nav .big-screen-brand{
+        margin: 0 -15px;
     }
 }
 
