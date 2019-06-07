@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,33 +8,16 @@ import { Router, NavigationEnd } from '@angular/router';
 export class AppComponent implements OnInit {
   scrolledPassedFirstInput = false;
 
-  constructor(private router: Router){ }
+  constructor(){ }
 
   ngOnInit(){
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if((<NavigationEnd>event).url === '/'){
-          window.addEventListener('scroll',()=>{
-            if(window.pageYOffset > 385){
-              this.scrolledPassedFirstInput = true;
-            }
-            else{
-              this.scrolledPassedFirstInput = false;
-            }
-          }), true;
-        }
+    window.addEventListener('scroll',()=>{
+      if(window.pageYOffset > 385){
+        this.scrolledPassedFirstInput = true;
       }
       else{
-        window.removeEventListener('scroll',()=>{
-          if(window.pageYOffset > 385){
-            this.scrolledPassedFirstInput = true;
-          }
-          else{
-            this.scrolledPassedFirstInput = false;
-          }
-          console.log('running');
-        }), false;
+        this.scrolledPassedFirstInput = false;
       }
     });
-  }
+  } 
 }

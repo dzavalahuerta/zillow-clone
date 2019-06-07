@@ -1,43 +1,48 @@
 <nav *ngIf="!scrolledPassedFirstInput" class="navbar navbar-expand-md navbar-light bg-white main-nav">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button (click)="fullscreenNav()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="small-screen-brand">
+        <a class="navbar-brand" routerLink="/">
+            <img class="zillow-brand-img"src="../assets/images/zillow-brand.PNG" alt="">
+        </a>
+    </div>
     
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav ml-5 mt-2 mt-lg-0 p-2">
+        <ul class="navbar-nav ml-5 mt-2 mt-lg-0 p-2 ul-small-screen-style">
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Buy</a>
+                <a class="nav-link text-dark"><span>Buy</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Rent</a>
+                <a class="nav-link text-dark"><span>Rent</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Sell</a>
+                <a class="nav-link text-dark"><span>Sell</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Home Loans</a>
+                <a class="nav-link text-dark"><span>Home Loans</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark">Agent finder</a>
+                <a class="nav-link text-dark"><span>Agent finder</span></a>
             </li>
         </ul>
         <div class="p-2">
-            <a class="navbar-brand">
+            <a class="navbar-brand big-screen-brand" routerLink="/">
                 <img class="zillow-brand-img"src="../assets/images/zillow-brand.PNG" alt="">
             </a>
         </div>
-        <ul class="navbar-nav mr-5 mt-2 mt-lg-0 p-2">
-            <li class="nav-item mr-3 display-toggle">
-                <a class="nav-link text-dark">List your rental</a>
+        <ul class="navbar-nav mr-5 mt-2 mt-lg-0 p-2 ul-display-toggle">
+            <li class="nav-item mr-3 li-display-toggle">
+                <a class="nav-link text-dark"><span>List your rental</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Advertise</a>
+                <a class="nav-link text-dark"><span>Advertise</span></a>
             </li>
             <li class="nav-item mr-3">
-                <a class="nav-link text-dark">Sign in or Join</a>
+                <a class="nav-link text-dark"><span>Sign in or Join</span></a>
             </li>
-            <li class="nav-item display-toggle">
-                <a class="nav-link mr-3 text-dark">Help</a>
+            <li class="nav-item li-display-toggle">
+                <a class="nav-link mr-3 text-dark"><span>Help</span></a>
             </li>
         </ul>
     </div>
@@ -53,7 +58,7 @@
     </form>
 </nav>
 
-<router-outlet></router-outlet>
+<app-home-page></app-home-page>
 
 <footer>
     <div class="dropdowns">
