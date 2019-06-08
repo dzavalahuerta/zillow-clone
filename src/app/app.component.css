@@ -256,6 +256,12 @@ footer .zillow-brand-container{
     border-radius: 50%;
 }
 
+.zillow-brand-img,
+.facebook-svg,
+.twitter-svg{
+    cursor: pointer;
+}
+
 footer .footer-img{
     width: 100%;
     position: absolute;
