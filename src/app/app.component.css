@@ -11,11 +11,6 @@
     color: rgb(19,111,251);
 }
 
-/* last things to do:
-finish all of the linkdropdowns,
-look for more issues
-refactorcode */
-
 .linkDropdown{
     width: 100%;
     background-color: white;
@@ -37,8 +32,12 @@ refactorcode */
     color: rgb(30, 124, 255);
 }
 
+
+.linkDropdown > div:nth-of-type(1){
+    margin-left: 2em;
+}
+
 .linkDropdown .vertical-line{
-    height: 185px; /*this will be dynamic later*/
     width: 1px;
     background-color: rgb(210,210,210);
     margin-right: 2em;
@@ -46,12 +45,26 @@ refactorcode */
     align-self: flex-start;
 }
 
-.buy-link-on-hover-dropdown > div:nth-of-type(1){
-    margin-left: 2em;
+.rent-link-on-hover-dropdown .vertical-line-height,
+.home-loans-link-on-hover-dropdown .vertical-line-height,
+.agent-finder-link-on-hover-dropdown .vertical-line-height{
+    height: 220px;
+}
+
+.buy-link-on-hover-dropdown .vertical-line-height{
+    height: 200px;
+}
+
+.sell-link-on-hover-dropdown .vertical-line-height{
+    height: 150px;
 }
 
 .buy-link-on-hover-dropdown > div{
     width: 300px;
+}
+
+.agent-finder-link-on-hover-dropdown > div{
+    width: 355px;
 }
 
 .buy-link-on-hover-dropdown div > div{
@@ -60,9 +73,19 @@ refactorcode */
     flex-wrap: wrap;
     height: 150px;
 }
+.agent-finder-link-on-hover-dropdown div > div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 200px;
+}
 
-.rent-link-on-hover-dropdown div{
-    width: 200px;
+.rent-link-on-hover-dropdown > div,
+.sell-link-on-hover-dropdown > div,
+.home-loans-link-on-hover-dropdown > div{
+    width: 180px;
+    display: flex;
+    flex-direction: column;
 }
 
 .small-screen-brand{

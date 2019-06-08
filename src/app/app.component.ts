@@ -34,10 +34,10 @@ export class AppComponent implements OnInit, AfterViewInit {
       let link = dropdownLinks[i];
       for (let index = 0; index < linkDropdowns.length; index++) {
         let dropdown:any = linkDropdowns[i];
-        link.addEventListener('mouseover',()=>{
+        link.addEventListener('mouseenter',()=>{
           dropdown.style.display = 'flex';
         });
-        link.addEventListener('mouseout',()=>{
+        link.addEventListener('mouseleave',()=>{
           dropdown.style.display = 'none';
         });
       }
