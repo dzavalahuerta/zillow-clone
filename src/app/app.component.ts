@@ -6,8 +6,6 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild('buyLink') buyLink;
-  @ViewChild('buyLinkDropdown') buyLinkDropdown;
   scrolledPassedFirstInput = false;
 
   constructor(){ }
@@ -25,35 +23,34 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
   
   ngAfterViewInit(){
-    console.log(document.querySelectorAll('a.dropdownLink'));
-    console.log(document.querySelectorAll('div.linkDropdown'));
     const dropdownLinks = document.querySelectorAll('a.dropdownLink');
     const linkDropdowns = document.querySelectorAll('div.linkDropdown');
+    let mouseoverDropdown = false;
 
     for (let i = 0; i < dropdownLinks.length; i++) {
       let link = dropdownLinks[i];
       for (let index = 0; index < linkDropdowns.length; index++) {
         let dropdown:any = linkDropdowns[i];
+        dropdown.addEventListener('mouseenter',()=>{
+          mouseoverDropdown = true;
+        });
+        dropdown.addEventListener('mouseleave',()=>{
+          mouseoverDropdown = false;
+          dropdown.style.display = 'none';
+        });
         link.addEventListener('mouseenter',()=>{
-          dropdown.style.display = 'flex';
+          setTimeout(() => {
+            dropdown.style.display = 'flex';
+          }, 500);
         });
         link.addEventListener('mouseleave',()=>{
-          dropdown.style.display = 'none';
+          setTimeout(() => {
+            if(mouseoverDropdown === false){
+              dropdown.style.display = 'none';
+            }
+          }, 500);
         });
       }
     }
-
-
-    let buyLink = this.buyLink.nativeElement;
-    buyLink.addEventListener('mouseover',()=>{
-      setTimeout(() => {
-        this.buyLinkDropdown.nativeElement.style.display = 'flex';
-      }, 400);
-    });
-    buyLink.addEventListener('mouseout',()=>{
-      setTimeout(() => {
-        this.buyLinkDropdown.nativeElement.style.display = 'none';
-      }, 400);
-    });
   }
 }
