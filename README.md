@@ -1,6 +1,7 @@
 # RealEstateWebsite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.7.
+Built with Angular, Sass, and Bootstrap
 
 ## Development server
 
