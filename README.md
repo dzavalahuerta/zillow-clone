@@ -8,3 +8,8 @@ Zero functionality, strictly an imitation of https://www.zillow.com/ home page d
 * Angular
 * Sass
 * Bootstrap
+
+## Planned improvements:
+
+* Replicate other pages of the Zillow website.
+* Create REST API with Node.js and Express.js
